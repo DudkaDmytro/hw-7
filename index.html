@@ -39,7 +39,7 @@
             </li>
           </ul>
         </nav>
-        <ul class="contacts list">
+        <ul class="contacts list header-contacts">
           <li class="contacts-mail">
             <a
               class="contacts-link link mail-link"
@@ -53,7 +53,27 @@
             >
           </li>
         </ul>
+        <button
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg
+          width="24"
+          height="24"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
       </div>
+      
     </header>
     <!-----/HEADER----->
     <main>
@@ -72,50 +92,50 @@
         <div class="container">
           <h2 class="plug">Features</h2>
           <ul class="list list-features">
-            <li>
+            <li class="features-content">
               <div class="features-block-svg">
                 <svg class="features-svg" width="64" height="64">
                   <use href="./img/sprite.svg#antenna"></use>
                 </svg>
               </div>
-              <h3 class="title">Strategy</h3>
-              <p class="description">
+              <h3 class="title title-feature">Strategy</h3>
+              <p class="description feature-description">
                 Our goal is to identify the business problem to walk away with
                 the perfect and creative solution.
               </p>
             </li>
-            <li>
+            <li class="features-content">
               <div class="features-block-svg">
                 <svg class="features-svg" width="64" height="64">
                   <use href="./img/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <h3 class="title">Punctuality</h3>
-              <p class="description">
+              <h3 class="title title-feature">Punctuality</h3>
+              <p class="description feature-description">
                 Bring the key message to the brand's audience for the best price
                 within the shortest possible time.
               </p>
             </li>
-            <li>
+            <li class="features-content">
               <div class="features-block-svg">
                 <svg class="features-svg" width="64" height="64">
                   <use href="./img/sprite.svg#diagram"></use>
                 </svg>
               </div>
-              <h3 class="title">Diligence</h3>
-              <p class="description">
+              <h3 class="title title-feature">Diligence</h3>
+              <p class="description feature-description">
                 Research and confirm brands that present the strongest digital
                 growth opportunities and minimize risk.
               </p>
             </li>
-            <li>
+            <li class="features-content">
               <div class="features-block-svg">
                 <svg class="features-svg" width="64" height="64">
                   <use href="./img/sprite.svg#astronaut"></use>
                 </svg>
               </div>
-              <h2 class="title">Technologies</h2>
-              <p class="description">
+              <h2 class="title title-feature">Technologies</h2>
+              <p class="description feature-description">
                 Design practice focused on digital experiences. We bring forth a
                 deep passion for problem-solving.
               </p>
@@ -125,7 +145,7 @@
       </section>
       <!------ /FEATURES------>
       <!------ABOUT-US------>
-      <section class="section about-us-section">
+      <!-- <section class="section about-us-section">
         <div class="container">
           <h2 class="main-title">What are we doing</h2>
           <ul class="list about-us-list">
@@ -155,14 +175,14 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!------/ABOUT-US------>
       <!------OUR-TEAM------>
       <section class="section our-team-section">
         <div class="container">
           <h2 class="main-title">Our Team</h2>
           <ul class="list our-team-list">
-            <li>
+            <li class="our-team-content">
               <img
                 src="./img/our_team/img1.jpg"
                 alt="Mark Guerrero"
@@ -204,7 +224,7 @@
                 </ul>
               </div>
             </li>
-            <li>
+            <li class="our-team-content">
               <img
                 src="./img/our_team/img2.jpg"
                 alt="Tom Ford"
@@ -246,7 +266,7 @@
                 </ul>
               </div>
             </li>
-            <li>
+            <li class="our-team-content">
               <img
                 src="./img/our_team/img3.jpg"
                 alt="Camila Garcia"
@@ -288,7 +308,7 @@
                 </ul>
               </div>
             </li>
-            <li>
+            <li class="our-team-content">
               <img
                 src="./img/our_team/img4.jpg"
                 alt="Daniel Wilson"
@@ -433,8 +453,10 @@
           </ul>
         </div>
         <div class="footer-modal-form">
-          <p class="footer-form-subscribe">Subscribe</p>
-          <form class="footer-form">
+         
+          <form class="footer-form"> 
+            <p class="footer-form-subscribe">Subscribe</p>
+            <div class="footer-form-subscribe-wrapper">
             <label class="footer-modal-form-field">
                           <span class="footer-form-input-wrapper">
                 <input
@@ -452,6 +474,7 @@
                 <use href="./img/sprite.svg#icon-send"></use>
               </svg>
             </button>
+          </div>
           </form>
         </div>
       </div>
@@ -537,6 +560,76 @@
         </form>
       </div>
     </div>
+    <!----- MODAL-MENU------>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="modal-close-btn-icon" width="8" height="8">
+          <use href="./img/sprite.svg#icon-close-modal"></use>
+        </svg>
+      </button>
+      <ul class="modal-menu-list list">
+        <li class="menu-item">
+          <a class="modal-menu-link" href="/index.html"
+            >Studio</a
+          >
+        </li>
+        <li class="">
+          <a class="modal-menu-link" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="">
+          <a class="modal-menu-link modal-menu-link-third" href="#">Contacts</a>
+        </li>
+      </ul>
+      <ul class="mobile-menu-contacts-list list">
+        <li <a href="" class="mobile-menu-contacts-number" >+11 (000) 111-11-11</a></li>
+        <li <a href="" class="mobile-menu-contacts-mail"> info@devstudio.com</a></li>
+      </ul>
+      <ul class="social-link list">
+        <li class="social-list-item">
+          <a class="social-list-link" href>
+            <svg class="social-list-icon" width="16" height="16">
+              <use href="./img/sprite.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a class="social-list-link" href>
+            <svg class="social-list-icon" width="16" height="16">
+              <use href="./img/sprite.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a class="social-list-link" href>
+            <svg class="social-list-icon" width="16" height="16">
+              <use href="./img/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a class="social-list-link" href>
+            <svg class="social-list-icon" width="16" height="16">
+              <use href="./img/sprite.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <!-- <ul class="mobile-menu">
+        <li><a href="" class="link">About</a></li>
+        <li><a href="" class="link">Products</a></li>
+        <li><a href="" class="link">Contacts</a></li>
+        <li><a href="" class="link">Career</a></li>
+      </ul> -->
+    </div>
+    <!----- /MODAL-MENU------> 
+     <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"
+  ></script>
     <script src="./js/modal.js"></script>
+  
+  <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
