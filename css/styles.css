@@ -1105,6 +1105,10 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 50%;
   outline: none;
 }
+.page-header-container{
+  display: flex;
+  justify-content: space-between;
+}
 
 @media (min-width: 768px) {
   .menu-toggle {
@@ -1198,6 +1202,13 @@ text-transform: capitalize;
 color: #4D5AE5;
 margin-bottom: 40px;
 }
+/* .modal-open-btn-icon{
+  fill: #2E2F42;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 
   /* position: absolute;
   top: 16px;
